@@ -8,5 +8,13 @@ jobs:
     strategy:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@4
+        with:
+          node-version: '20'
+      - name: Npm Install
+        run: npm install
+      - name: Run Cypress
+        run: npx cypress run
