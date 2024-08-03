@@ -17,7 +17,7 @@ describe('Cadastro Simples de Usuário', () => {
       body: {
         nome: nome,
         email: email,
-        password: 'password123',
+        password: 'password1234',
         administrador: 'true'
       }
     }).should((response) => {
