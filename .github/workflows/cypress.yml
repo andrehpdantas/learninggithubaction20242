@@ -19,7 +19,7 @@ jobs:
       - name: Run Cypress
         run: npx cypress run
       - name: Upload screenshot artifacts
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         # add the line below to store screenshots only on failures
         # if: failure()
         with:
@@ -27,7 +27,7 @@ jobs:
           path: cypress/screenshots
           if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
       - name: Upload video artifacts
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos
